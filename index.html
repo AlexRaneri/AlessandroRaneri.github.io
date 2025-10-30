@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro Raneri</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    header { background: #004080; color: white; padding: 1rem 0; }
+    nav { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; text-decoration: none; margin-left: 1rem; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { color: #004080; }
+    section { margin-bottom: 2rem; }
+    .project, .experience-item, .edu-item { margin-bottom: 1rem; }
+    footer { background: #f4f4f4; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+    .project a { margin-right: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><h1>Alexander M. Köhler</h1></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a final-year Economics master's student at Toulouse School of Economics, specializing in financial mathematics, econometric analysis, and risk management. I am seeking roles in trading or structuring in financial markets, starting end of 2025.</p>
+    </section>
+
+    <section id="research">
+        <h2>Research & Projects</h2>
+        
+        <div class="project">
+            <h3>Assessing Green Bond Yield Differences</h3>
+            <p>
+                One of my most recent applications of statistical methods was in my second year empirical
+                project in my masters analysing the existence of the “greenium” in corporate bonds. I chose
+                to employ a matching method (Pietsch and Salakhova 2022) rather than a conventional panel
+                or OLS regression (Zerbib 2019). The matching method pairs green bonds with similar conventional 
+                bonds based on key characteristics such as maturity, credit rating, and issuer profile,
+                allowing for a direct comparison of yield to maturity (YTM). This approach was preferable to
+                a panel regression as it minimises the risk of an omitted variable bias. For a causal identification, 
+                the panel regression approach needs additional data for macroeconomic controls and fixed
+                effects for bond characteristic. By implementing a matching method, I was able to create a
+                quasi-experimental setup that more accurately isolates the greenium effect from confounding
+                influences.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/EGR-Empirical-Project" target="_blank">GitHub</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h3>Sunlight Synchronisation: DST &amp; Emissions</h3>
+            <p>
+                Another empirical project I worked on during my first year at TSE involved analysing the
+                Australian electricity market using an event study design. The study focused on the impact of
+                daylight saving time (DST) on CO2 emissions and electricity consumption. Given the heterogeneous 
+                adoption of DST across Australian regions, we leveraged a Difference-in-Differences-inDifferences (DDD) 
+                (Gruber 1994) framework to control for unobserved state-specific shocks and
+                identify the causal impact of DST on electricity consumption and emissions. This approach
+                was more robust than a standard Difference-in-Differences (DiD) model, as it accounted for
+                additional confounding factors (see Callaway and Sant’Anna (2021), Heckman et al. (1997), 
+                and Kellogg and Wolff (2008)) and ensured that the “parallel trends assumption” held. Our
+                findings indicated that DST has a positive yet statistically insignificant effect on greenhouse
+                gas emissions and energy consumption, aligning with existing literature. However, the data
+                exhibited a visible decrease in CO2 emissions in the recent years, which coincides with the
+                increased uptake in solar energy production and amplifying the effect DST can have on CO2
+                emissions, suggesting a more focused analysis on recent years.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/applied-econometrics-dst/blob/master/FinalReport.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/applied-econometrics-dst" target="_blank">GitHub</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h3>Financial Econometrics 1: Volatility &amp; Risk Modeling </h3>
+            <p>
+                In my Financial Econometrics coursework, I have applied a range of statistical techniques and
+                theoretical frameworks to address volatility, risk, and high-dimensional challenges in financial
+                data of high and low frequencies. I employed time-series models—including ARCH, GARCH
+                (and its leverage-augmented variants such as NAGARCH)—to capture time-varying volatility,
+                co-movement across asset classes, and risk spillovers. Through an empirical project using
+                hand-written Quasi-Maximum Likelihood Estimator (QMLE) on S&P 500 returns, I compared
+                multiple model specifications (Gaussian and Student-t distributions, varying data-generating
+                processes, and leverage factors). The results have shown that data-specific GARCH models
+                outperform RiskMetrics baseline in returns forecasting and Value at Risk (VaR) modelling
+                tasks, despite QMLE’s sensitivity to small samples and local minima—challenges I mitigated
+                via grid search optimisation.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%201/Financial_Econometrics_HW1_Hafez_Koehler_Suero.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%201" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Financial Econometrics 2: Predictive Regressions Using Factors </h3>
+            <p> 
+                As part of the second major assignment we were tasked to forecast macroeconomic and financial variables using high-dimensional data. 
+                Guiding literature was given by Stock and Watson (2002), Ludvigson and Ng (2007 and 2009), with Carrasco and Rossi (2016) comparing
+                the results of dynamic factor models to other methods of reduction of dimensionality like Lasso. We decided to base our analysis on
+                the dataset FRED-MD created by McCracken and Ng (2015). FRED-MD is a large macroeconomic database of monthly frequency with many 
+                different macroecnomic variables. To manage the high-dimensional data, I applied Principal Component Analysis (PCA) for factor
+                extraction and dimensionality reduction. We obtain 8 factors that can be interpreted as real activity / employ, forward-looking variables 
+                (interest rate spreads, inventories) and inflation to name a few. Using the estimated factors, we forecast equity returns and compare our
+                results to more parsimonious models such as an AR(1).
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Nour%20homework%202%20(Project)/Financial_Econometrics_Project_%20AKo%CC%88hler_TSorokina_CBerner.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Nour%20homework%202%20(Project)/FE_project_Nour.ipynb" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Financial Econometrics 3: Multivariate Volatility Modelling </h3>
+            <p> 
+              In the final assigment for Financial Econometrics we choose to estimate and use a multivariate GARCH model 
+              to forecast Value at Risk (VaR) levels and exceedances. Starting off with more simple univariate GARCH models,
+              we compare our forecasts to a diagonal GARCH model, constant‑correlation GARCH, and ultimately a multivariate 
+              BEKK model, with the latter being the most flexible and computationally expensive to estimate. We find a significantly
+              better out of sample forecasting with the more flexible multivariate GARCH model compared to more "naive" methods such 
+              as estimating the variance-covariance matrix and calculating the respective quantile.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%204%20Serge/Financial_Econometrics_Project_Serge.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%204%20Serge" target="_blank">GitHub</a>
+        </div>
+        
+        <div class="project">
+            <h3>Extreme Risk Analysis of FX Markets</h3>
+            <p>
+                During the “Extreme Risk Analysis” course, I analysed the extreme value behaviour of the
+                USD–Euro exchange rate between January 2004 and December 2023. In contrast to the blockmaxima approach, 
+                I focused on threshold exceedances to model Value at Risk (VaR) and
+                Expected Shortfall (ES). Suspecting heavy-tailed data, I employed the Generalised Pareto 
+                maximum likelihood estimator without assuming a specific form for the extreme value index (γ) or
+                the distribution’s shape. Only after estimating a positive and statistically significant γ did I
+                switch to the Hill estimator and its corresponding extreme quantile estimator, taking advantage 
+                of their superior asymptotic variance properties relative to the generalised approach. I
+                also investigated intra-day highs to capture the intra-day dynamics of the FX rate, given that
+                liquidity and capital regulations are increasingly shifting from a purely daily perspective to an
+                intra-day view. The results surprisingly indicated that intra-day risks are not significantly different,
+                presumably due to the nature of the data and the fact that most of the trading occurs during the 
+                opening and closing hours of the market.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/ERA-Project/blob/main/Extreme_Value_Theory_USD_EUR.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/ERA-Project" target="_blank">GitHub</a>
+        </div>
+        
+        <div class="project">
+            <h3>Multivariate&nbsp;Time‑Series Project</h3>
+            <h3>Extreme‑Weather Risk and U.S. Insurance Prices</h3>
+            <p>
+                As part of the course “Multivariate Time Series” I examined how extreme weather events affect
+                insurance prices by combining media-derived indicators of climate risk (Bua et al. 2024) with
+                inflation-adjusted disaster costs and consumer price indices for household insurance. Stationarity 
+                and unit root tests were run and I estimated a Vector Autoregressive (VAR / VARMA)
+                model after ensuring cointegration among I(1) variables was not present. The Hannan-Quinn
+                criterion guided the selection of optimal lag lengths rather than AIC due to AIC not being
+                consistent in small samples (Hurvich and Tsai 1989). Subsequently, I used Granger causality
+                tests to reveal the temporal influence among climate risk indicators, disaster costs, and 
+                insurance prices, and impulse response functions (IRFs) to measure the magnitude and persistence
+                of shocks. These steps were followed by robustness checks substituting the consumer-focused
+                index (CPI) with the producer-side measure (PPI) to investigate whether producer cost structures also responded to climatic shocks.
+            </p>  
+            <p>
+            <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Multivariate_Time_Series_Paper.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Multivariate-Time-Series" target="_blank">GitHub</a>
+            <p>
+            <h3>Analysing The Relationship Between Real Money and Activity</h3>
+            <p>
+              In addition to the project on extreme weather risk, I also worked on a project analysing the relationship between real money and activity.
+              Working now in Python instead of SAS with data gathered from the FRED database, I estimate a VECM model after finding oen Cointegration relationship
+              between the variables "GDP", "M2" and "CPI". I then test the restrictions of the cointegration relationship to analyse whether there is a constant 
+              long-run relationship between GDP and M2/CPI and find that the long-run relationship is not stable and that I reject the restrictions of the VECM model.
+              I complement my analysis with forecasting the variables and analysing Impulse Response Functions (IRFs) to see how the variables react to shocks in the system.
+              Granger causality tests (to be implemented) will also be performed to see whether the variables are Granger-causal to each other.
+              Please note that this project is still a work in progress and the analysis and text is of preliminary nature.
+            </p>
+            <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Money-Activity-Analysis/Lecture-Reestimation-Real-Money-Activity.ipynb" target="_blank"> Juypyter Notebook</a>
+
+        </div>
+        
+        <div class="project">
+            <h3>Scoring &amp; Default Prediction</h3>
+            <section>
+            <p>
+                As part of the course on scoring methods, based partly on Hastie et al. (2009), I conducted analyses
+                aimed at accurately classifying and predicting defaults using statistical and machine
+                learning methods. Starting with logistic regression, I evaluated limitations of the approach,
+                particularly in terms of flexibility, variable selection efficiency, and its performance in 
+                scenarios with non-linearities and interactions among variables. To address these shortcomings,
+                I explored penalised regression approaches, such as Lasso and Ridge regressions, improving
+                variable selection capabilities and treating sparsity of the data. I compared this benchmark
+                with decision tree and ensemble models including AdaBoost and LogitBoost, which strategically 
+                aggregate predictions from multiple weaker classifiers creating more robust and accurate
+                predictive outcomes.
+                To ensure a reliable assessment of model performance, I compared two validation methods:
+                the hold-out approach and K-fold cross-validation. While the hold-out approach provided a
+                straightforward split into training and test sets, K-fold cross-validation offered greater 
+                precision by mitigating sampling risks and reducing the instability arising from limited training
+                data. Despite its computational intensity, cross-validation was instrumental in confirming the
+                robustness and stability of the predictive models developed.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/Scoring/blob/main/Code/Project%20-%20Scoring_models.qmd" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Scoring/tree/main" target="_blank">GitHub</a>
+        </div>
+        </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="experience-item">
+        <h3>Trading Intern, DWS Group GmbH & Co. KGaA</h3>
+        <span>Frankfurt, Germany | May 2025 (expected)</span>
+        <ul>
+          <li>Analysing optimal trading strategies by estimating and calibrating continuous time models of optimal execution.</li>
+      </div>
+      <div class="experience-item">
+        <h3>Financial Markets Summer Intern, Sales & Trading, Standard Chartered Bank AG</h3>
+        <span>Frankfurt, Germany | Jun – Aug 2024</span>
+        <ul>
+          <li>Automated bond redemption analyses with VBA macros.</li>
+          <li>Streamlined EM Credit sales desk reporting.</li>
+          <li>Researched JPY rates correlation for G10 FX swaps desk (Python).</li>
+        </ul>
+      </div>
+      <!-- Add more experience items similarly -->
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>Master’s in Economics of Global Risks</h3>
+        <span>Toulouse School of Economics, France | Sep 2023 – Nov 2025</span>
+        <p>GPA: ~16.5/20 (Very Good, UK First Class)</p>
+      </div>
+      <div class="edu-item">
+        <h3>B.Sc. in Economics</h3>
+        <span>University of Mannheim, Germany | 2020 – 2023</span>
+        <p>GPA: 1.9 (Good, UK First Class) <br> Thesis: Merger Waves and Dynamic Cartel Enforcement in US Airline Industry (Grade: 1.0).</p>
+      </div>
+      <!-- Add other education items -->
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <p><strong>Languages:</strong> English & German (bilingual), French (C1)</p>
+      <p><strong>Technical:</strong> Python, VBA, SQL, R, Stata, Excel, PowerPoint</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements & Activities</h2>
+      <ul>
+        <li>UKMT Intermediate Mathematical Challenge: Gold (Top 8%)</li>
+        <li>Pink Kangaroo 2017: Merit (Top 25%)</li>
+        <li>Mannheim Investment Club: Emerging Markets Analyst</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <p>Contact: <a href="mailto:koehler.alexander.markus@gmail.com">koehler.alexander.markus@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/alexander-markus-koehler/" target="_blank">LinkedIn</a> | <a href="https://github.com/Fijiman001" target="_blank">GitHub</a></p>
+    <p>&copy; 2025 Alexander M. Köhler</p>
+  </footer>
+</body>
+</html>
