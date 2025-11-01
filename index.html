@@ -111,64 +111,17 @@
         </div>
         
         <div class="project">
-            <h3>Multivariate&nbsp;Time‑Series Project</h3>
-            <h3>Extreme‑Weather Risk and U.S. Insurance Prices</h3>
+            <h3>Sustainable Energy Storage</h3>
             <p>
-                As part of the course “Multivariate Time Series” I examined how extreme weather events affect
-                insurance prices by combining media-derived indicators of climate risk (Bua et al. 2024) with
-                inflation-adjusted disaster costs and consumer price indices for household insurance. Stationarity 
-                and unit root tests were run and I estimated a Vector Autoregressive (VAR / VARMA)
-                model after ensuring cointegration among I(1) variables was not present. The Hannan-Quinn
-                criterion guided the selection of optimal lag lengths rather than AIC due to AIC not being
-                consistent in small samples (Hurvich and Tsai 1989). Subsequently, I used Granger causality
-                tests to reveal the temporal influence among climate risk indicators, disaster costs, and 
-                insurance prices, and impulse response functions (IRFs) to measure the magnitude and persistence
-                of shocks. These steps were followed by robustness checks substituting the consumer-focused
-                index (CPI) with the producer-side measure (PPI) to investigate whether producer cost structures also responded to climatic shocks.
+               The aim of the project is to develop an uninterruptable low-cost energy supply for a data centre in Honoka’a, Hawaii. It consists of a renewable energy storage system, using energy from wind farms when there is a surplus, to store energy for use when the wind is low. The project involves assessing a means by which energy can be stored for peak shaving, and selecting one of these based on cost, environmental impact, and benefit for the local community.
+            A green hydrogen energy storage system is selected based on a triple bottom line assessment, chosen instead of hydropower for financial, environmental, and social reasons.
             </p>  
             <p>
-            <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Multivariate_Time_Series_Paper.pdf" target="_blank">Report (PDF)</a>
-            <a href="https://github.com/Fijiman001/Multivariate-Time-Series" target="_blank">GitHub</a>
-            <p>
-            <h3>Analysing The Relationship Between Real Money and Activity</h3>
-            <p>
-              In addition to the project on extreme weather risk, I also worked on a project analysing the relationship between real money and activity.
-              Working now in Python instead of SAS with data gathered from the FRED database, I estimate a VECM model after finding oen Cointegration relationship
-              between the variables "GDP", "M2" and "CPI". I then test the restrictions of the cointegration relationship to analyse whether there is a constant 
-              long-run relationship between GDP and M2/CPI and find that the long-run relationship is not stable and that I reject the restrictions of the VECM model.
-              I complement my analysis with forecasting the variables and analysing Impulse Response Functions (IRFs) to see how the variables react to shocks in the system.
-              Granger causality tests (to be implemented) will also be performed to see whether the variables are Granger-causal to each other.
-              Please note that this project is still a work in progress and the analysis and text is of preliminary nature.
-            </p>
-            <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Money-Activity-Analysis/Lecture-Reestimation-Real-Money-Activity.ipynb" target="_blank"> Juypyter Notebook</a>
-
+            <a href="https://github.com/AlexRaneri/Data-Centre-Report/blob/main/CE30241_CW2_Participant-11293.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/AlexRaneri/Data-Centre-Report/tree/main" target="_blank">GitHub</a>
         </div>
         
-        <div class="project">
-            <h3>Scoring &amp; Default Prediction</h3>
-            <section>
-            <p>
-                As part of the course on scoring methods, based partly on Hastie et al. (2009), I conducted analyses
-                aimed at accurately classifying and predicting defaults using statistical and machine
-                learning methods. Starting with logistic regression, I evaluated limitations of the approach,
-                particularly in terms of flexibility, variable selection efficiency, and its performance in 
-                scenarios with non-linearities and interactions among variables. To address these shortcomings,
-                I explored penalised regression approaches, such as Lasso and Ridge regressions, improving
-                variable selection capabilities and treating sparsity of the data. I compared this benchmark
-                with decision tree and ensemble models including AdaBoost and LogitBoost, which strategically 
-                aggregate predictions from multiple weaker classifiers creating more robust and accurate
-                predictive outcomes.
-                To ensure a reliable assessment of model performance, I compared two validation methods:
-                the hold-out approach and K-fold cross-validation. While the hold-out approach provided a
-                straightforward split into training and test sets, K-fold cross-validation offered greater 
-                precision by mitigating sampling risks and reducing the instability arising from limited training
-                data. Despite its computational intensity, cross-validation was instrumental in confirming the
-                robustness and stability of the predictive models developed.
-            </p>
-            <p>
-            <a href="https://github.com/Fijiman001/Scoring/blob/main/Code/Project%20-%20Scoring_models.qmd" target="_blank">Report (PDF)</a>
-            <a href="https://github.com/Fijiman001/Scoring/tree/main" target="_blank">GitHub</a>
-        </div>
+       
         </section>
 
     <section id="education">
